@@ -6,7 +6,7 @@ dotenv.config();
 
 const adminAuthorization = require('./middleware/adminAuthorization');
 
-const PORT = process.env.PORT;
+//const PORT = process.env.PORT; tidak pakai port lagi
 
 app.use(cors());
 
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
     res.send("Hello There!!");
 });
 
-// Mengimpor authController dengan ejaan yang benar
+
 const authController = require("./auth/auth.controller");
 
 const itemController = require("./item/item.controller");
@@ -25,13 +25,15 @@ const userController = require("./user/user.controller");
 
 const transactionController = require("./transaction/transaction.controller");
 
-// Memastikan nama variabel konsisten di sini
+
 app.use("/api/auth", authController);
 app.use("/api/items", itemController);
 app.use("/api/users", adminAuthorization, userController);
 app.use("/api/transactions", transactionController);
 
-app.listen(PORT, () => {
+/*app.listen(PORT, () => {
     console.log('App listening on port ' + PORT);
 
-});
+});*/
+
+export default app;
