@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const authService = require('./auth.service');
+const authService = require("./auth.service");
 
-router.post('/register',async (req, res, next) => {
+router.post("/register",async (req, res, next) => {
     const {username, email, password } = req.body;
 
     try {
@@ -13,7 +13,7 @@ router.post('/register',async (req, res, next) => {
     }
 }); 
 
-router.post('/login', async (req, res, next) => {
+router.post("/login", async (req, res, next) => {
     const { username, password } = req.body;
 
     try {

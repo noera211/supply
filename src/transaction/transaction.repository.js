@@ -29,7 +29,7 @@ async function findTransactions() {
         });
         return transactions;
     } catch (error) {
-        throw new Error('Failed to fetch transactions');
+        throw new Error("Failed to fetch transactions");
     }
 }
 
@@ -49,7 +49,7 @@ async function findTransactionsByUserId(userId) {
         });
         return transactions;
     } catch (error) {
-        throw new Error('failed to fetch transactions by User ID');
+        throw new Error("failed to fetch transactions by User ID");
     }
     
 }
@@ -80,7 +80,7 @@ async function updateTransactionStatus(transactionId, status, TimeStampField) {
             data: updateData,
         });
     } catch (error) {
-        throw new Error('Failed to Update Transaction Status');
+        throw new Error("Failed to Update Transaction Status");
         
     }
 }

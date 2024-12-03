@@ -5,7 +5,7 @@ async function createUser(userData) {
         const newUser = await prisma.user.create({ data: userData});
         return newUser;
     } catch (error) {
-        throw new Error('Failed to create user in repository')
+        throw new Error("Failed to create user in repository")
     }
 }
 

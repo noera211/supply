@@ -1,9 +1,9 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const dotenv = require('dotenv');
+const dotenv = require("dotenv");
 dotenv.config();
 
-const adminAuthorization = require('./middleware/adminAuthorization');
+const adminAuthorization = require("./middleware/adminAuthorization");
 
 app.use(express.json());
 
